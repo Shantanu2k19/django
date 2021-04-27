@@ -1,0 +1,17 @@
+<DOCTYPE HTML>
+<html>
+    <head>
+        <title>CANTEEN</title>
+    </head>
+    <body>
+        <h1>CANTEEN MENU DTU.</h1>
+        <ul>
+            <!--temp name of context received from views.py-->
+            {% for gg in temp %}
+            <li>
+                {{ gg.item }}
+            </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
