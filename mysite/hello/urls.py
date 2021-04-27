@@ -5,5 +5,6 @@ from . import views
 
 #this contain all the urls
 urlpatterns = [
-    path("",views.index)  #run index function from views for empty route
+    path("",views.index),  #run index function from views for empty route
+    path("<int:num>",views.bill)
 ]

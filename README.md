@@ -49,3 +49,40 @@ f = menu.objects.first()
 
 f.delete()
 
+
+
+#putting customers
+from hello.models import customers
+f = menu.objects.first()
+c = customer(name="shan", order=f, bill=15)
+c.save()
+
+c.name   //shan
+c.order.item //samosa
+
+f.cu_orders.all() //<menu:  samosa, code: sam costing 10Rs. >
+
+
+
+for html pages 
+create 
+folder templates
+folder hello(app name inside it)
+then index.html inside it
+add route in views.py
+
+
+#add and modify data using admin
+register menu and customer in admin.py
+
+
+create user account for admin
+python manage.py createsuperuser
+name : zodiac
+email : 2030
+password : shan@2001
+
+
+1. add a url in apps urls.py and direct to a function
+2. write that function in views.py and render html page passing context
+3. make html page in templates
