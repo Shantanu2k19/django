@@ -86,3 +86,10 @@ password : shan@2001
 1. add a url in apps urls.py and direct to a function
 2. write that function in views.py and render html page passing context
 3. make html page in templates
+
+
+#creating a user in shell 
+from django.contrib.auth.models import User
+user = Users.objects.create_user("username","abc@smth.com","password")
+user.first_name="shan"
+user.save()
