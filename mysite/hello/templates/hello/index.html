@@ -1,17 +1,69 @@
-<DOCTYPE HTML>
-<html>
-    <head>
-        <title>CANTEEN</title>
-    </head>
-    <body>
-        <h1>CANTEEN MENU DTU.</h1>
-        <ul>
-            <!--temp name of context received from views.py-->
-            {% for gg in temp %}
-            <li>
-                {{ gg.item }}
-            </li>
-            {% endfor %}
-        </ul>
-    </body>
-</html>
+{% extends "hello/layout.html" %}
+
+{% block title %}
+CANTEEN
+{% endblock %}
+
+{% block body %}
+
+
+<h1>CANTEEN MENU DTU</h1>
+<ul>
+    <!--temp name of context received from views.py-->
+    {% for gg in temp %}
+    <li>
+        <a href="{% url 'itemPage' gg.id %}">{{ gg.item }}</a>
+        <!-- route back to pages-->
+    </li>
+    {% endfor %}
+</ul>
+
+
+
+<button type="button"  data-toggle="modal" data-target="#loginModal">Login
+<a href="{% url 'register' %}"> <button type="button" >Signup</button></a>
+
+
+{% if message %}
+    <div>
+        {{ message }}
+    </div>
+{% endif %}
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalTitle">Login Here</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+            <form action="{% url 'login' %}" method="POST"> {% csrf_token %}
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="loginusername" name="loginusername" placeholder="Enter your username "required>
+                </div>
+
+                <div class="form-group">
+                    <label for="pass">Enter your password </label>
+                    <input type="password" class="form-control" id="loginpassword" name="loginpassword" placeholder="Enter your password "required>
+                </div>
+                
+            <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    
+       </div>
+    </div>
+</div>
+
+
+
+
+ {% endblock %}

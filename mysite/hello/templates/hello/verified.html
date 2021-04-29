@@ -1,0 +1,30 @@
+{% extends "hello/layout.html" %}
+
+{% block title %}
+CANTEEN
+{% endblock %}
+
+{% block body %}
+
+{% if message %}
+    <div>
+        {{ message }}
+    </div>
+{% endif %}
+<h1>CANTEEN MENU DTU  bbbbvv.</h1>
+<ul>
+    <!--temp name of context received from views.py-->
+    {% for gg in temp %}
+    <li>
+        <a href="{% url 'itemPage' gg.id %}">{{ gg.item }}</a>
+        <!-- route back to pages-->
+    </li>
+    {% endfor %}
+</ul>
+
+
+
+<button type="button"  data-toggle="modal" data-target="#logoutModal">Logout
+
+
+ {% endblock %}

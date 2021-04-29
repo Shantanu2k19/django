@@ -81,6 +81,8 @@ python manage.py createsuperuser
 name : zodiac
 email : 2030
 password : shan@2001
+pass - shan@2002 -- for authentication app
+
 
 
 1. add a url in apps urls.py and direct to a function
@@ -93,3 +95,7 @@ from django.contrib.auth.models import User
 user = Users.objects.create_user("username","abc@smth.com","password")
 user.first_name="shan"
 user.save()
+
+shan
+pass : 12345
+

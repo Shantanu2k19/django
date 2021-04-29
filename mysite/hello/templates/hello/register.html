@@ -1,0 +1,102 @@
+{% extends "hello/layout.html" %}
+
+{% block title%}
+    Signup | user
+{% endblock %}
+
+{% block body %}
+<!--
+<div class="modal-body">
+    <form action="/signup" method='post'>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" id="username" name="username"
+                placeholder="Choose a unique username">
+        </div>
+        <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" class="form-control" id="fname" name="fname"
+                placeholder="Enter Your First Name">
+        </div>
+        <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" class="form-control" id="lname" name="lname"
+                placeholder="Enter Your Last Name">
+        </div>
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+            <label for="pass1">Choose a password</label>
+            <input type="password" class="form-control" id="pass1" name="pass1"
+                placeholder="Choose Your Password">
+        </div>
+        <div class="form-group">
+            <label for="pass2">Confirm Password</label>
+            <input type="password" class="form-control" id="pass2" name="pass2"
+                placeholder="Enter your password again">
+        </div>
+
+
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+-->
+{{message}}
+<div id="login-box">
+    <div class="left">
+      <h1>Sign up</h1>
+      <form action="{% url 'register' %}" method='post'>
+      
+            <input type="text" class="form-control" id="username" name="username" placeholder="Username" />
+
+        
+            <input type="text" name="email" placeholder="E-mail" />
+            <input type="password" name="pass1" placeholder="Password" />
+            <input type="password" name="pass2" placeholder="Retype password" />
+            
+            {% csrf_token %} 
+            <input type="submit" name="signup_submit" value="Sign me up" />
+        </form>
+    </div>
+    
+    <div class="right">
+      <span class="loginwith">Sign in with<br />social network</span>
+      
+      <button class="social-signin facebook">Log in with facebook</button>
+      <button class="social-signin twitter">Log in with Twitter</button>
+      <button class="social-signin google">Log in with Google+</button>
+    </div>
+    <div class="or">OR</div>
+</div>
+
+<div class="bottom-text">
+   <!-- <a href="{% url 'login' %}">Login</a> instead  -->
+    <br>
+    back to <a href="{% url 'homePage' %}">main page</a>
+</div>
+{% endblock %}
+
+
+<!-- SignUp Modal 
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="signupModalTitle">SignUp Here</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            
+
+
+
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+-->

@@ -27,6 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+STATICFILES_DIRS = [
+    "/mysite/hello/static",
+]
+
+MEDIA_URL='/images/'
 
 # Application definition
 
