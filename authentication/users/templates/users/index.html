@@ -1,0 +1,17 @@
+{% extends "users/base.html" %}
+
+{% block body %}
+<h1>Index page</h1>
+
+{% if message %}
+    <div>
+        {{ message }}
+    </div>
+{% endif %}
+<br>
+<a href="{% url 'login_page' %}"><button>Login</button></a>
+<br>
+<br>
+<a href="{% url 'signup' %}"><button>Signup</button></a>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "users/base.html" %}
+
+{% block body %}
+Signup page
+<br>
+<br>
+
+<form action="{% url 'signup' %}" method="post" autocomplete="off">
+    {% csrf_token %}
+    <input name="username" type="text" placeholder="username" />
+    <br>
+    <input name="f_name" type="text" placeholder="first name"/>
+    <br>
+    <input name="l_name" type="text" placeholder="last name" />
+    <br>
+    <input name="pass1" type="text" placeholder="password" /> 
+    <br>
+    <input name="pass2" type="password" placeholder="re-enter pssword" />
+    <br>
+    <input type="submit" value="Signup"/>
+</form>
+
+{% endblock %}
