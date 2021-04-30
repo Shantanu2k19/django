@@ -1,6 +1,8 @@
 # django
 uploading previous and new Django projects 
 
+
+---  NOTES ---
 #python manage.py runserver
 django-admin startproject name
 
