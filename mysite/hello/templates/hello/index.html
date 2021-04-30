@@ -12,23 +12,27 @@ CANTEEN
     <!--temp name of context received from views.py-->
     {% for gg in temp %}
     <li>
-        <a href="{% url 'itemPage' gg.id %}">{{ gg.item }}</a>
-        <!-- route back to pages-->
+        {{ gg.item }}
     </li>
     {% endfor %}
 </ul>
 
+<br>
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
 
 
 <button type="button"  data-toggle="modal" data-target="#loginModal">Login
-<a href="{% url 'register' %}"> <button type="button" >Signup</button></a>
 
+<a href="{% url 'signup_page' %}"> <button type="button" >Signup</button></a>
 
-{% if message %}
-    <div>
-        {{ message }}
-    </div>
-{% endif %}
 
 <!-- Login Modal -->
 <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">

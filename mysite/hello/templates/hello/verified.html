@@ -6,12 +6,14 @@ CANTEEN
 
 {% block body %}
 
-{% if message %}
-    <div>
-        {{ message }}
-    </div>
-{% endif %}
+
 <h1>CANTEEN MENU DTU  bbbbvv.</h1>
+
+Hello {{ user.username }}
+
+
+
+<h3><Main>----MENU----</Main></h3>
 <ul>
     <!--temp name of context received from views.py-->
     {% for gg in temp %}
@@ -23,8 +25,6 @@ CANTEEN
 </ul>
 
 
+<a href="{% url 'logout' %}"><button >Logout</button></a>
 
-<button type="button"  data-toggle="modal" data-target="#logoutModal">Logout
-
-
- {% endblock %}
+{% endblock %}

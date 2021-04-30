@@ -101,3 +101,10 @@ user.save()
 shan
 pass : 12345
 
+
+
+
+if css not updating, 
+shft+reload the page
+or 
+ctrl+f5

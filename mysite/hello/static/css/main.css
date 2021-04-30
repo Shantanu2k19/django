@@ -37,15 +37,16 @@ h1 {
   margin: 0 0 20px 0;
   font-weight: 300;
   font-size: 28px;
+  color:#16a085;
 }
 
 input[type="text"],
 input[type="password"] {
-  display: block;
+  display : inline-block;
   box-sizing: border-box;
   margin-bottom: 20px;
   padding: 4px;
-  width: 220px;
+  width: 200px;
   height: 32px;
   border: none;
   border-bottom: 1px solid #AAA;
@@ -166,4 +167,14 @@ button.social-signin.google {
     color:gray;
     text-align: center;
     align-items: center;
+}
+
+#user_check{
+  color:red;
+}
+#pass1_check{
+  color:red;
+}
+#pass2_check{
+  color:red;
 }

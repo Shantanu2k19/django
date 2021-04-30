@@ -5,11 +5,13 @@ from . import views
 
 #this contain all the urls
 urlpatterns = [
-    path("",views.index,name="homePage"),  #run index function from views for empty route
-    path("<int:num>",views.itemInfo,name="itemPage"),
-
+    path("",views.index,name="index"),  
     path('login', views.handLogin, name="login"),
-    path("register/",views.handleSignUp, name="register"),
-    path("verified/",views.verified, name="verified"),
+    path('logout',views.handlogout,name="logout"),
+    path("signup_helper",views.signup_page, name="signup_page"),
+    path("signup", views.signup_view, name="signup"),
+
+    path("<int:num>",views.itemInfo,name="itemPage"),
+    path("verified",views.verified, name="verified"),
 ]
 #naming route to refer it easily

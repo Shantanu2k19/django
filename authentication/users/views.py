@@ -52,5 +52,5 @@ def signup_view(request):
     
 def logout_view(request):
     logout(request)
-    return HttpResponseRedirect(reverse("index"))
-    #return render(request, "users/index.html", {"message": "Logged out."})
+    #return HttpResponseRedirect(reverse("index"))
+    return render(request, "users/index.html", {"message": "Logged out."})
