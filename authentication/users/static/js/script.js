@@ -2,8 +2,6 @@ document.addEventListener('DOMContentLoaded', () =>
             {
                 document.querySelector('#submit').disabled = true;
 
-                //Enable button only when key-up, text is entered
-                //also check if the length of entered string is 0, bcs erasing the text will enable submit button
                 document.querySelector('#username').onkeyup = () => {
                 	if(document.querySelector('#username').value.length > 1){
                         document.getElementById("user_check").style.color = "green";
@@ -39,27 +37,5 @@ document.addEventListener('DOMContentLoaded', () =>
                         document.getElementById("user_check").style.color = "red";
                     }
                 };
-
-                /*
-                document.querySelector('#new-task').onsubmit = () => 
-                {
-
-                    // Create new item for list, take value from #task
-                    const li = document.createElement('li');
-                    li.innerHTML = document.querySelector('#task').value;
-
-                    // Add new item to task list
-                    document.querySelector('#tasks').append(li);
-
-                    // Clear input field
-                    document.querySelector('#task').value = '';
-
-                    //after clearing, disable the button again
-                    document.querySelector('#submit').disabled = true;
-
-                    // Stop form from submitting(reloading the page), hence the task will not get erased
-                    return false;
-                };
-                */
 
 });

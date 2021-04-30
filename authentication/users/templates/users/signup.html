@@ -4,11 +4,6 @@
 
 Signup page
 <br>
-{% if message %}
-    <div>
-        {{ message }}
-    </div>
-{% endif %}
 <br>
 <br>
 
@@ -22,9 +17,9 @@ Signup page
     <br>
     <input name="email" type="text" placeholder="mail" />
     <br>
-    <input name="pass1" id="pass1"type="text" placeholder="password" required/>  <span id="pass1_check">&#10004</span>
+    <input name="pass1" id="pass1"type="password" placeholder="password"  required/>  <span id="pass1_check">&#10004</span>
     <br>
-    <input name="pass2"  id="pass2" type="text" placeholder="re-enter password" required/>  <span id="pass2_check">&#10004</span>
+    <input name="pass2"  id="pass2" type="password" placeholder="re-enter password" required/>  <span id="pass2_check">&#10004</span>
     <br>
     <span id="advice">passwords should be same</span>
     <br>

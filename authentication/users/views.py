@@ -36,18 +36,14 @@ def signup_page(request):
 def signup_view(request):
     if request.method == 'POST':
         username = request.POST["username"]
-        password1 = request.POST["pass1"]
-        password2 = request.POST["pass2"]
+        password = request.POST["pass1"]
         mail = request.POST["email"]
-        if password1 == password2:
-            form = UserCreationForm(request.POST)
-            user = User.objects.create_user(username=username,
+        form = UserCreationForm(request.POST)
+        user = User.objects.create_user(username=username,
                                     email=mail,
-                                    password=password1)
-            login(request, user)
-            return HttpResponseRedirect(reverse("index"))
-        else:
-            return render(request, "users/signup.html", {"message": "passwords not same!"})
+                                    password=password)
+        login(request, user)
+        return HttpResponseRedirect(reverse("index"))
         #return HttpResponseRedirect(reverse("index"))
         #return render(request, "users/user.html", context)
     else:
