@@ -6,9 +6,13 @@
         {{ message }}
     </div>
 {% endif %}
-<h1>Hello, {{ user.first_name }}</h1>
-<ul>
-    <li>Currently logged in as: {{ user.username }}</li>
-    <li><a href="{% url 'logout' %}">Logout</a></li>
-</ul>
+<h1>Hello, {{ user.username }}</h1>
+
+<h2>USER APPLICATION PAGE</h2>
+<h2>Make your website content here</h2>
+Currently logged in as: {{ user.username }}
+<br>
+<br>
+<a href="{% url 'logout' %}">Logout</a>
+
 {% endblock %}

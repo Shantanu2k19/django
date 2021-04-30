@@ -27,6 +27,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+STATICFILES_DIRS = [
+    "/authentication/users/static",
+]
+
+MEDIA_URL='/images/'
+
 
 # Application definition
 

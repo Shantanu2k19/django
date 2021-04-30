@@ -1,0 +1,23 @@
+h1{
+    color: crimson;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+body{
+    background-color: #ffe4c4;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+#user_check{
+    color:red;
+}
+#pass1_check{
+    color:red;
+}
+#pass2_check{
+    color:red;
+}
+#advice{
+    color:grey;
+    font-size: xx-small;
+}

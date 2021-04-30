@@ -1,23 +1,35 @@
 {% extends "users/base.html" %}
 
 {% block body %}
-Signup page..
+
+Signup page
+<br>
+{% if message %}
+    <div>
+        {{ message }}
+    </div>
+{% endif %}
 <br>
 <br>
 
-<form action="{% url 'signup' %}" method="post" autocomplete="off">
+<form action="{% url 'signup' %}" method="post">
     {% csrf_token %}
-    <input name="username" type="text" placeholder="username" />
+    <input name="username" id="username" type="text" placeholder="username" required />  <span id="user_check">&#10004</span>
     <br>
     <input name="f_name" type="text" placeholder="first name"/>
     <br>
     <input name="l_name" type="text" placeholder="last name" />
     <br>
-    <input name="pass1" type="text" placeholder="password" /> 
+    <input name="email" type="text" placeholder="mail" />
     <br>
-    <input name="pass2" type="password" placeholder="re-enter pssword" />
+    <input name="pass1" id="pass1"type="text" placeholder="password" required/>  <span id="pass1_check">&#10004</span>
     <br>
-    <input type="submit" value="Signup"/>
+    <input name="pass2"  id="pass2" type="text" placeholder="re-enter password" required/>  <span id="pass2_check">&#10004</span>
+    <br>
+    <span id="advice">passwords should be same</span>
+    <br>
+    <br>
+    <input id="submit" type="submit" value="Signup" />
 </form>
 
 {% endblock %}

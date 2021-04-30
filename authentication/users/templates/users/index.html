@@ -1,7 +1,9 @@
 {% extends "users/base.html" %}
 
 {% block body %}
-<h1>Index page</h1>
+<h1>WELCOME PAGE</h1>
+<h2>INDEX</h2>
+
 
 {% if message %}
     <div>
@@ -12,6 +14,6 @@
 <a href="{% url 'login_page' %}"><button>Login</button></a>
 <br>
 <br>
-<a href="{% url 'signup' %}"><button>Signup</button></a>
+<a href="{% url 'signup_page' %}"><button>Signup</button></a>
 
 {% endblock %}
