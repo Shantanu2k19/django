@@ -7,31 +7,110 @@ CANTEEN
 {% block body %}
 
 
-<h1>CANTEEN MENU DTU</h1>
-<ul>
-    <!--temp name of context received from views.py-->
-    {% for gg in temp %}
-    <li>
-        {{ gg.item }}
-    </li>
-    {% endfor %}
-</ul>
-
-<br>
-
-{% if messages %}
-<ul class="messages">
-    {% for message in messages %}
-    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-    {% endfor %}
-</ul>
-{% endif %}
+<div class="layout-foreground">
+    <div id="blurred-image-container">
+        <div class="img-src"></div>
+        <div class="img-src blurred-image"></div>
+    </div>
 
 
 
-<button type="button"  data-toggle="modal" data-target="#loginModal">Login
+    <div id="auth">
+        <button class="buttonB">Admin</button>
+        <button type="button" class="buttonA" data-toggle="modal" data-target="#loginModal">Login
+        <a href="{% url 'signup_page' %}"> <button type="button" class="buttonA">Signup</button></a>
+    </div>
 
-<a href="{% url 'signup_page' %}"> <button type="button" >Signup</button></a>
+
+    <div class="top-heading">
+        MECH-C 
+        <h3 id="topp">DTU Canteen, Mechnaical department<br>Shahbad, Delhi<h3>
+    </div>
+
+
+    <div class="content">
+
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+
+
+        <h1 style="text-align: center; color:black">MENU</h1>
+            <!--temp name of context received from views.py-->
+            
+            <h4>Snacks</h4> 
+            <table id="table1">
+            <tr id="table_first">
+                <th>ITEM</th>
+                <th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th>
+                <th>CODE</th>
+                <th>PRICE</th>
+            </tr>
+            {% for gg in temp %}
+            <tr>
+                <td>{{gg.item}}</td>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td>{{ gg.code }}</td>
+                <td>{{ gg.price }}</td>
+            </tr>
+            {% endfor %}
+            </table>
+
+
+            <br><br>
+            <h4>Meals</h4>
+            <table id="table2">
+                <tr id="table_second">
+                    <th>ITEM</th>
+                    <th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th>
+                    <th>CODE</th>
+                    <th>PRICE</th>
+                </tr>
+                {% for gg in temp %}
+                <tr>
+                    <td>{{gg.item}}</td>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    <td>{{ gg.code }}</td>
+                    <td>{{ gg.price }}</td>
+                </tr>
+                {% endfor %}
+                </table>
+
+
+
+            <br><br>
+            <h4>Bewerages</h4>
+            <table id="table3">
+                <tr id="table_third">
+                    <th>ITEM</th>
+                    <th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th>
+                    <th>CODE</th>
+                    <th>PRICE</th>
+                </tr>
+                {% for gg in temp %}
+                <tr>
+                    <td>{{gg.item}}</td>
+                    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    <td>{{ gg.code }}</td>
+                    <td>{{ gg.price }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+
+        
+    </div>
+</div>
+
+
+
+
+
+
 
 
 <!-- Login Modal -->
@@ -55,7 +134,7 @@ CANTEEN
                 </div>
 
                 <div class="form-group">
-                    <label for="pass">Enter your password </label>
+                    <label for="pass">Password</label>
                     <input type="password" class="form-control" id="loginpassword" name="loginpassword" placeholder="Enter your password "required>
                 </div>
                 

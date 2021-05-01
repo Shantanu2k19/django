@@ -33,13 +33,6 @@ body {
   height: 400px;
 }
 
-h1 {
-  margin: 0 0 20px 0;
-  font-weight: 300;
-  font-size: 28px;
-  color:#16a085;
-}
-
 input[type="text"],
 input[type="password"] {
   display : inline-block;
@@ -177,4 +170,8 @@ button.social-signin.google {
 }
 #pass2_check{
   color:red;
+}
+
+h1{
+  font-family: Arial, Helvetica, sans-serif;
 }

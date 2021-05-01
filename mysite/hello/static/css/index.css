@@ -1,0 +1,197 @@
+body { margin: 0; padding: 0; 
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    }
+    html {
+        height: 100%;
+    }
+    #blurred-image-container {
+        display:block;
+        padding:0;
+        position:fixed;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        z-index:-1;
+        align-items: center;
+        align-content: center;
+    }
+    
+    .img-src { 
+        position: absolute;
+        background: url("back8.jpeg");
+        object-fit: none;
+        background-size: cover;
+        top: -10%;
+        bottom: 10%;
+        left: -10%;
+        right: 10%;
+        width:120%;
+        height:120%;
+    }
+    
+    .img-src.blurred-image {
+    
+    align-items: center;
+    align-content: center;
+        opacity:0;
+        -webkit-filter: blur(20px) brightness(0.7);
+        -ms-filter: blur(20px) brightness(0.7);
+        -o-filter: blur(20px) brightness(0.7);
+        filter: blur(20px) brightness(0.7);
+    }
+    
+    
+    /*top panel*/
+    #auth {  
+        background-color: none;
+        background-image: linear-gradient(to bottom right, rgb(165, 165, 165), rgba(156, 156, 156, 0.548)); 
+        align-content: center;
+        text-align: right;
+        width: 100%;
+        border:solid forestgreen 0px;
+        opacity: 1;
+        box-shadow: 5px 7px 29px gray;
+    }
+    
+    .top-heading{
+        text-align: left;
+        font-size: 6vw;
+        color: black;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-weight: bolder;
+
+        margin-left: 4%;
+        margin-right: 18%;
+        margin-bottom: 7%;
+        border: 0px solid black;
+    }
+
+    #topp{
+        text-align: left;
+        font-size: 3vw;
+        color: #3f8642;
+        font-family:Arial, Helvetica, sans-serif, 'Times New Roman', Times, serif;
+    }
+
+    .content {
+        width: auto;
+        background-color: gray;
+        background-image: linear-gradient(to bottom right, rgba(192, 192, 192, 0.719), rgba(156, 156, 156, 0.548)); 
+        padding:5% 5%;
+        color:#fff;
+        margin-left: 4%;
+        margin-right: 18%;
+        margin-top: 5%;
+        border: 0px solid;
+        box-shadow: 5px 10px 8px black;
+        position:relative;  
+        bottom:50px;
+    }
+
+#snax{
+    image-rendering: src="snax.png";
+
+}
+    /****TABLES*****/
+    
+
+    #table1 th, #table2 th, #table3 th{
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #4CAF50;
+        color: white;
+      }
+
+      #table1, #table2, #table3{
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        background-color: white;
+      }
+      
+      #table1 td, #table2 td, #table3 td {
+        border: 0px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      
+      #table1 tr:nth-child(even), #table2 tr:nth-child(even), #table3 tr:nth-child(even){
+          background-color: #f2f2f2;
+        }
+      
+      #table1 tr:hover, #table2 tr:hover, #table3 tr:hover {background-color: #ddd;}
+      
+      #table1 th, #table2 th, #table3 th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align:left;
+        background-color: #4CAF50;
+        color: white;
+      }
+      #table1 th{
+        background-color: #4CAF50;
+      }
+      #table2 th{
+        background-color: #2980b9;
+      }
+      #table3 th{
+        background-color: #ea6153;
+      }
+
+
+
+     /*icon*/
+     .avatar { 
+        height: 100px;
+        width: 100px;
+        border-radius: 100%;
+        border: 5px solid #fff;
+        margin-bottom:50px;
+    }
+
+
+
+
+.buttonA:hover {
+    background-color: #458847; 
+    color: white;
+  }
+  
+  .buttonB:hover{
+    background-color: #4CAF50; 
+    color: white;
+   }
+  
+  .buttonA {
+    padding: 8px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    background-color: #4CAF50;
+    color: white; 
+    border: 2px solid #4CAF50;
+  }
+  
+  .buttonB {
+    padding: 8px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14;
+    margin: 4px 2px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    background: none;
+    color: #4CAF50; 
+    border: 2px solid #4CAF50;
+  }
