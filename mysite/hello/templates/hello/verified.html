@@ -5,26 +5,115 @@ CANTEEN
 {% endblock %}
 
 {% block body %}
+<br>
+<div class="verified_top">
+    <p>Hello <strong>{{ user.username }}</strong> 
+        <br>
+        Place your order
+    </p>
+    
+</div>
+ 
+
+<div class="content2">
+
+    <form action="{% url 'billing' %}" method='post'>
+        {% csrf_token %} 
+        <h4 style="color: #4CAF50;">Snacks</h4> 
+        <table id="table1">
+        <tr id="table_first">
+            <th>ITEM</th>
+            <th></th><th></th><th></th><th></th><th></th>
+            <th>PRICE</th>
+            <th>ORDER</th>
+            <th>Nos.</th>
+        </tr>
+        
+        {% for gg in temp %}
+        <tr>
+            {% if gg.category == "snax" %}
+            <td>{{gg.item}}</td>
+            <td></td><td></td><td></td><td></td><td></td>
+            <td>{{ gg.price }}</td>
+            <td><input type="checkbox" id="check_box" value="haha" name="yoooo"></td>
+            <td><input type="number" id="quantity" value="lol" name="lollol"  min="0" max="20"></td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+        </table>
 
 
-<h1>CANTEEN MENU DTU  bbbbvv.</h1>
+        <br><br>
+        <h4 style="color: #2980b9;">Meals</h4>
+        <table id="table2">
+            <tr id="table_second">
+                <th>ITEM</th>
+                <th></th><th></th><th></th><th></th><th></th>
+                <th>PRICE</th>
+                <th>ORDER</th>
+            <th>Nos.</th>
+            </tr>
+            {% for gg in temp %}
+            <tr>
+                {% if gg.category == "meal" %}
+                <td>{{gg.item}}</td>
+                <td></td><td></td><td></td><td></td><td></td>
+                <td>{{ gg.price }}</td>
+                <td><input type="checkbox" id="check_box" value="haha" name="yoooo"></td>
+                <td><input type="number" id="quantity" value="lol" name="lollol"  min="0" max="20"></td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+            </table>
 
-Hello {{ user.username }}
+
+
+        <br><br>
+        <h4 style="color:#ea6153;">Bewerages</h4>
+        <table id="table3">
+            <tr id="table_third">
+                <th>ITEM</th>
+                <th></th><th></th><th></th><th></th><th></th>
+                <th>PRICE</th>
+                <th>ORDER</th>
+            <th>Nos.</th>
+            </tr>
+            {% for gg in temp %}
+            <tr>
+                {% if gg.category == "bewg" %}
+                <td>{{gg.item}}</td>
+                <td></td><td></td><td></td><td></td><td></td>
+                <td>{{ gg.price }}</td>
+                <td><input type="checkbox" id="check_box" value="haha" name="yoooo"></td>
+                <td><input type="number" id="quantity" value="lol" name="lollol"  min="0" max="20"></td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </table>
+        <br>
+
+        <div style="justify-content: center; display: flex;">
+            <input type="submit" style="position: absolute; display: none;" ><button class="buttonA">confirm order</button>
+        </div>
+
+    
+
+        
+    </form>    
+</div>
+
+<div class="verified_top">
+    <a href="{% url 'logout' %}"><button class="buttonB" >Logout</button></a>
+</div>
+
+<br><br>
+
+
+<!--        <a href="-{-%- url 'itemPage' gg.id -%-}">-{-{- g-g.item }}</a>
+     route back to pages
+-->
 
 
 
-<h3><Main>----MENU----</Main></h3>
-<ul>
-    <!--temp name of context received from views.py-->
-    {% for gg in temp %}
-    <li>
-        <a href="{% url 'itemPage' gg.id %}">{{ gg.item }}</a>
-        <!-- route back to pages-->
-    </li>
-    {% endfor %}
-</ul>
-
-
-<a href="{% url 'logout' %}"><button >Logout</button></a>
 
 {% endblock %}

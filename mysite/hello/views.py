@@ -6,6 +6,7 @@ from django.shortcuts import render
 from django.urls import reverse
 from django.contrib import messages 
 
+from django.views.decorators.csrf import ensure_csrf_cookie
 
 from django.shortcuts import render, HttpResponse, redirect
 from django.contrib.auth.models import User 
@@ -14,10 +15,12 @@ from .models import menu
 # Create your views here.
 
 
+
 def index(request):
     #context dictionary to pass value
     context ={
         "temp": menu.objects.all()
+        #"SNAX":menu.objects.all().filter(category="snax"),
     }
     return render(request, "hello/index.html",context)
 
@@ -31,11 +34,9 @@ def handLogin(request):
         if user is not None:
             login(request, user)
             context ={
-                "temp": menu.objects.all()
+                "temp" : menu.objects.all()
             }
-            return render(request, "hello/verified.html",context)
-            #return HttpResponseRedirect(reverse(""))
-            #return redirect("verified")
+            return redirect("verified")
         else:
             messages.info(request, 'Invalid credentials. Please try again!')
             return redirect("index")
@@ -89,3 +90,7 @@ def verified(request):
         "temp": menu.objects.all()
     }
     return render(request, "hello/verified.html",context)
+
+def billing(request):
+    messages.info(request, 'Will be available soon!')
+    return render(request,"hello/error.html")

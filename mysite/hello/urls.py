@@ -13,5 +13,7 @@ urlpatterns = [
 
     path("<int:num>",views.itemInfo,name="itemPage"),
     path("verified",views.verified, name="verified"),
+
+    path("billing",views.billing,name="billing")
 ]
 #naming route to refer it easily

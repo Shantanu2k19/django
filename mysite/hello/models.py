@@ -5,10 +5,12 @@ class menu(models.Model):
     item= models.CharField(max_length = 64)
     code = models.CharField(max_length = 3)
     price = models.IntegerField()
+    category = models.CharField(max_length=4,default='meal')
 
     #what the object should look like, terminal or page
     def __str__(self):
-        return f" {self.item}, code: {self.code} costing {self.price}Rs. \n"
+        return f" {self.item}, code: {self.code} costing {self.price}Rs. belongs to {self.category} \n"
+
 
 class customer(models.Model):
     name = models.CharField(max_length=64)

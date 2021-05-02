@@ -79,7 +79,7 @@ body { margin: 0; padding: 0;
     .content {
         width: auto;
         background-color: gray;
-        background-image: linear-gradient(to bottom right, rgba(192, 192, 192, 0.719), rgba(156, 156, 156, 0.548)); 
+        background-image: linear-gradient(to bottom right, rgb(224, 224, 224), rgb(179, 179, 179)); 
         padding:5% 5%;
         color:#fff;
         margin-left: 4%;
@@ -88,7 +88,7 @@ body { margin: 0; padding: 0;
         border: 0px solid;
         box-shadow: 5px 10px 8px black;
         position:relative;  
-        bottom:50px;
+        bottom:40px;
     }
 
 #snax{
@@ -176,9 +176,9 @@ body { margin: 0; padding: 0;
     border-radius: 8px;
     cursor: pointer;
     transition-duration: 0.3s;
-    background-color: #4CAF50;
+    background-color: #41b945;
     color: white; 
-    border: 2px solid #4CAF50;
+    border: 2px solid #41b945;
   }
   
   .buttonB {
@@ -194,4 +194,13 @@ body { margin: 0; padding: 0;
     background: none;
     color: #4CAF50; 
     border: 2px solid #4CAF50;
+  }
+
+
+/*NOT WORKING!!!!!!*/
+  #messg{
+    font-size: medium;
+    font-family: monospace;
+    text-align: left;
+    color: #4CAF50;
   }

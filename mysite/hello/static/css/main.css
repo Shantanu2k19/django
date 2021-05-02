@@ -57,7 +57,8 @@ input[type="password"]:focus {
 }
 
 input[type="submit"] {
-  margin-top: 28px;
+  margin-top: 16px;
+  margin-left: 30px;
   width: 120px;
   height: 32px;
   background: #16a085;
@@ -174,4 +175,41 @@ button.social-signin.google {
 
 h1{
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.content2{
+  width: auto;
+  background-color: gray;
+  background-image: linear-gradient(to bottom right, rgb(224, 224, 224), rgb(139, 218, 107)); 
+  padding:5% 5%;
+  color:#fff;
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-top: 5%;
+  border: 0px solid;
+  box-shadow: 5px 10px 8px black;
+  position:relative;  
+  bottom:40px;
+  border: gray 1px solid;
+}
+
+
+.verified_top{
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif; 
+  font-weight: bold;
+  font-size:4vw; 
+  color: black;
+}
+
+#quantity{
+  width: 50px;
+  border: solid black 1px;
+}
+
+#check_box{
+  width: 20px;
+  height: 20px;
 }

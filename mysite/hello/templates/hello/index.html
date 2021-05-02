@@ -31,7 +31,7 @@ CANTEEN
     <div class="content">
 
         {% if messages %}
-        <ul class="messages">
+        <ul id="mssg">
             {% for message in messages %}
             <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
             {% endfor %}
@@ -43,7 +43,7 @@ CANTEEN
         <h1 style="text-align: center; color:black">MENU</h1>
             <!--temp name of context received from views.py-->
             
-            <h4>Snacks</h4> 
+            <h4 style="color: #4CAF50;">Snacks</h4> 
             <table id="table1">
             <tr id="table_first">
                 <th>ITEM</th>
@@ -51,19 +51,25 @@ CANTEEN
                 <th>CODE</th>
                 <th>PRICE</th>
             </tr>
+            
             {% for gg in temp %}
             <tr>
+                {% if gg.category == "snax" %}
                 <td>{{gg.item}}</td>
                 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
                 <td>{{ gg.code }}</td>
                 <td>{{ gg.price }}</td>
+                {% endif %}
             </tr>
             {% endfor %}
             </table>
 
 
+
+
+
             <br><br>
-            <h4>Meals</h4>
+            <h4 style="color: #2980b9;">Meals</h4>
             <table id="table2">
                 <tr id="table_second">
                     <th>ITEM</th>
@@ -73,18 +79,22 @@ CANTEEN
                 </tr>
                 {% for gg in temp %}
                 <tr>
+                    {% if gg.category == "meal" %}
                     <td>{{gg.item}}</td>
                     <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
                     <td>{{ gg.code }}</td>
                     <td>{{ gg.price }}</td>
+                    {% endif %}
                 </tr>
                 {% endfor %}
                 </table>
 
 
 
+
+
             <br><br>
-            <h4>Bewerages</h4>
+            <h4 style="color:#ea6153;">Bewerages</h4>
             <table id="table3">
                 <tr id="table_third">
                     <th>ITEM</th>
@@ -94,14 +104,17 @@ CANTEEN
                 </tr>
                 {% for gg in temp %}
                 <tr>
+                    {% if gg.category == "bewg" %}
                     <td>{{gg.item}}</td>
                     <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
                     <td>{{ gg.code }}</td>
                     <td>{{ gg.price }}</td>
+                    {% endif %}
                 </tr>
                 {% endfor %}
             </table>
-
+            <br><br><br>
+            <span style="font-size:medium; text-align:center; font-family:monspace; color: gray; ">Login to Order</span>
         
     </div>
 </div>
