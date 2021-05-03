@@ -52,3 +52,7 @@ document.addEventListener('DOMContentLoaded', () =>
                 };
 
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById("timebill").innerHTML = Date();
+});

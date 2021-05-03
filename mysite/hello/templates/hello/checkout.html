@@ -1,0 +1,63 @@
+{% extends "hello/layout.html" %}
+
+{% block title%}
+    Checkout
+{% endblock %}
+
+{% block body %}
+
+<br>
+
+
+<div class="verified_top">
+    <br><br>
+    <p>Thank-You! Your order have been received 
+        <br>
+    </p>
+    
+</div>
+ 
+<div class="billing-div">
+    <div >
+        <p style="font-size: medium;">Order Summary</p>
+        Name : {{user.username}}
+        <br>
+        E-mail : {{user.email}} 
+        <br>
+        Time   : <span id="timebill"></span>
+     
+    </div>
+    <br><br>
+    <table class="billing-tbl">
+        <th>Item</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        </tr>
+
+        {% for key, value in info2.items %}
+        <tr>
+            {% for gg in value %}
+            <td>
+                {{gg}}
+            </td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+       <tr>
+           <td>
+               Total
+           </td>
+           <td></td><td></td>
+           <td>
+               {{bill}}
+           </td>
+       </tr>
+    </table>    
+</div>
+
+<div class="verified_top">
+    <a href="{% url 'logout' %}"><button class="buttonB" >Logout</button></a>
+</div>
+<br><br><br><br><br><br><br>
+{% endblock %}

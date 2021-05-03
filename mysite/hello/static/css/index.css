@@ -81,7 +81,7 @@ body { margin: 0; padding: 0;
         background-color: gray;
         background-image: linear-gradient(to bottom right, rgb(224, 224, 224), rgb(179, 179, 179)); 
         padding:5% 5%;
-        color:#fff;
+        color:red;
         margin-left: 4%;
         margin-right: 18%;
         margin-top: 5%;
@@ -204,3 +204,52 @@ body { margin: 0; padding: 0;
     text-align: left;
     color: #4CAF50;
   }
+
+
+
+.billing-div{
+  width: auto; 
+  font-family: monospace;
+  font-size: small;
+  background-color: #eeebcf ;
+  padding:5% 5%;
+  color:rgb(53, 53, 53);
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 5%;
+  border: 1px solid #eee487 ;
+  box-shadow: 5px 10px 8px black;
+  position:relative;  
+  bottom:40px;
+}
+
+
+
+
+
+.billing-tbl{
+  width: 100%;
+  background-color: #eeebcf ;
+  border: 2px dashed #a09c71;
+  text-align: left;
+  font-family: monospace;
+  font-size:large;
+  color:rgb(68, 68, 68);
+}
+
+.billing-tbl th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #e0dcb4;
+}
+
+.billing-tbl td {
+  border: 1px solid #a09c71;
+  padding: 8px;
+  text-align: left;
+}
+
+.mssg{
+  color:black;
+}

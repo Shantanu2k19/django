@@ -35,8 +35,8 @@ CANTEEN
             <td>{{gg.item}}</td>
             <td></td><td></td><td></td><td></td><td></td>
             <td>{{ gg.price }}</td>
-            <td><input type="checkbox" id="check_box" value="haha" name="yoooo"></td>
-            <td><input type="number" id="quantity" value="lol" name="lollol"  min="0" max="20"></td>
+            <td><input type="checkbox" id="check_box" value="1" name="ord{{gg.code}}"></td>
+            <td><input type="number" id="quantity" value=1 name="quan{{gg.code}}" min="1" max="20"></td>
             {% endif %}
         </tr>
         {% endfor %}
@@ -59,8 +59,8 @@ CANTEEN
                 <td>{{gg.item}}</td>
                 <td></td><td></td><td></td><td></td><td></td>
                 <td>{{ gg.price }}</td>
-                <td><input type="checkbox" id="check_box" value="haha" name="yoooo"></td>
-                <td><input type="number" id="quantity" value="lol" name="lollol"  min="0" max="20"></td>
+                <td><input type="checkbox" id="check_box" value="1" name="ord{{gg.code}}"></td>
+                <td><input type="number" id="quantity" value=1 name="quan{{gg.code}}" min="1" max="20"></td>
                 {% endif %}
             </tr>
             {% endfor %}
@@ -84,8 +84,8 @@ CANTEEN
                 <td>{{gg.item}}</td>
                 <td></td><td></td><td></td><td></td><td></td>
                 <td>{{ gg.price }}</td>
-                <td><input type="checkbox" id="check_box" value="haha" name="yoooo"></td>
-                <td><input type="number" id="quantity" value="lol" name="lollol"  min="0" max="20"></td>
+                <td><input type="checkbox" id="check_box" value="1" name="ord{{gg.code}}"></td>
+                <td><input type="number" id="quantity" value=1 name="quan{{gg.code}}" min="1" max="20"></td>
                 {% endif %}
             </tr>
             {% endfor %}

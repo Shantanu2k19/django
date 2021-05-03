@@ -16,7 +16,7 @@ CANTEEN
 
 
     <div id="auth">
-        <button class="buttonB">Admin</button>
+        <a href="{% url 'admin:index' %}"><button class="buttonB">Admin</button></a>
         <button type="button" class="buttonA" data-toggle="modal" data-target="#loginModal">Login
         <a href="{% url 'signup_page' %}"> <button type="button" class="buttonA">Signup</button></a>
     </div>
@@ -114,7 +114,7 @@ CANTEEN
                 {% endfor %}
             </table>
             <br><br><br>
-            <span style="font-size:medium; text-align:center; font-family:monspace; color: gray; ">Login to Order</span>
+            <span style="font-size:medium; text-align:center; font-family:monspace; color: rgb(54, 54, 54); ">Login to Order</span>
         
     </div>
 </div>

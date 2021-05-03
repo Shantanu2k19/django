@@ -69,7 +69,8 @@ def signup_view(request):
         context ={
                 "temp": menu.objects.all()
             }
-        return render(request, "hello/verified.html",context)
+        return redirect("verified")
+        #return render(request, "hello/verified.html",context)
         #return HttpResponseRedirect(reverse("index"))
         #return render(request, "users/user.html", context)
     else:
@@ -92,5 +93,33 @@ def verified(request):
     return render(request, "hello/verified.html",context)
 
 def billing(request):
-    messages.info(request, 'Will be available soon!')
-    return render(request,"hello/error.html")
+    if request.method == 'POST':
+        ####   BILLING  #####
+        MENU = menu.objects.all()
+        bill = 0
+        info2={}
+        
+        for item in MENU:
+            #whether item selected
+            temp = request.POST.get('ord'+item.code, 0)
+            #if Yes
+            if temp == "1":  
+                listt = []
+                temp2 = request.POST.get('quan'+item.code, 0)
+                temp2 = int(temp2)+0  
+                bill += item.price*temp2
+
+                key_=str(item.item)
+                listt.append(key_)
+                listt.append(item.price)
+                listt.append(temp2)
+                listt.append(temp2*item.price)
+                info2[key_]=listt
+        print(info2)
+    context = {
+        "bill":bill,
+        "temp": menu.objects.all(),
+        "info2":info2
+    }
+    return render(request, "hello/checkout.html",context)
+    #return rendirect("checkout")

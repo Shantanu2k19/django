@@ -15,5 +15,6 @@ urlpatterns = [
     path("verified",views.verified, name="verified"),
 
     path("billing",views.billing,name="billing")
+   # path("checkout",views.checkout,name="checkout")
 ]
 #naming route to refer it easily
