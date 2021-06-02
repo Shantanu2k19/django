@@ -4,6 +4,8 @@ uploading previous and new Django projects
 
 ---  NOTES ---
 #python manage.py runserver
+
+
 django-admin startproject name
 
 python manage.py startapp app_name
@@ -11,12 +13,13 @@ python manage.py startapp app_name
 app- urls.py : edit
 app- create views.py, add views 
 
-project's - urls.py : add path for apps
+project's - urls.py : add path for apps    (path('',include('app1.urls')),)
+                        include header file include
 
 last configuration step:
     add your app in settings.py of mysite in installed apps. 
     'hello.apps.HelloConfig',
-                    from apps.py
+                    (from apps.py)
 
 
 app - Models.py 
