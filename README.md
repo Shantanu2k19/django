@@ -9,12 +9,15 @@ uploading previous and new Django projects
 django-admin startproject name
 
 python manage.py startapp app_name
+app- urls.py : create file and edit
+{
+    from django.urls import path
+    from . import views
+    path("",views.index,name="index"),  
+}
 
-app- urls.py : edit
-app- create views.py, add views 
-
-project's - urls.py : add path for apps    (path('',include('app1.urls')),)
-                        include header file include
+project's - urls.py : add path for apps    {path('',include('app1.urls')),}
+                        include header file include {from django.urls import include, path}
 
 last configuration step:
     add your app in settings.py of mysite in installed apps. 
